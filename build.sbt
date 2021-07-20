@@ -19,3 +19,6 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick" % "5.0.0",
   "com.typesafe.play" %% "play-slick-evolutions" % "5.0.0"
 )
+
+libraryDependencies += "com.typesafe.play" %% "play-mailer" % "8.0.1"
+libraryDependencies += "com.typesafe.play" %% "play-mailer-guice" % "8.0.1"

@@ -13,8 +13,6 @@ class UserDAO @Inject() (protected val dbConfigProvider: DatabaseConfigProvider)
 
   private val Users = TableQuery[UsersTable]
 
-  def all(): Future[Seq[User]] = db.run(Users.result)
-
   def insert(user: User): Future[Unit] = db.run(Users += user).map { _ => () }
 
   private class UsersTable(tag: Tag) extends Table[User](tag, "USER") {
